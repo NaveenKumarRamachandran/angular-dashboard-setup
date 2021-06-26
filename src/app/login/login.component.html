@@ -1,0 +1,43 @@
+<form style="margin-left: 40%; margin-right: 40%; margin-top: 50px">
+  <label for="inputEmail" style="text-align: left !important">Email</label>
+  <input
+    type="email"
+    name="email"
+    class="form-control"
+    [(ngModel)]="userSignIn.email"
+    placeholder="Email address"
+    required=""
+    autofocus=""
+  />
+  <label
+    for="inputPassword"
+    style="text-align: left !important; margin-top: 10px"
+    >Password</label
+  >
+  <input
+    type="password"
+    name="pwd"
+    class="form-control"
+    [(ngModel)]="userSignIn.password"
+    placeholder="Password"
+    required=""
+  />
+  <div class="checkbox mb-3"></div>
+  <button
+    class="btn btn-lg btn-primary btn-block"
+    (click)="signIn()"
+    type="submit"
+  >
+    Sign in
+  </button>
+  <div style="text-align: center !important">
+    <label for="or" class="mb-2"> or</label>
+  </div>
+  <button
+    class="btn btn-lg btn-primary btn-block"
+    (click)="signUp()"
+    type="submit"
+  >
+    Sign up
+  </button>
+</form>
