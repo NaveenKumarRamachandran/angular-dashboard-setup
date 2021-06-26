@@ -1,0 +1,55 @@
+<form style="margin-left: 40%; margin-right: 40%; margin-top: 50px">
+  <label for="inputEmail" style="text-align: left !important">First Name</label>
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="userSignIn.firstName"
+    placeholder="First Name"
+    required=""
+    name="firstName"
+    autofocus=""
+  />
+
+  <label for="inputEmail" style="text-align: left !important">Last Name</label>
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="userSignIn.lastName"
+    placeholder="Last Name"
+    required=""
+    name="lastName"
+    autofocus=""
+  />
+  <label for="inputEmail" style="text-align: left !important">Email</label>
+  <input
+    type="email"
+    id="inputEmail"
+    class="form-control"
+    [(ngModel)]="userSignIn.email"
+    placeholder="Email address"
+    name="email"
+    required=""
+    autofocus=""
+  />
+  <label
+    for="inputPassword"
+    style="text-align: left !important; margin-top: 10px"
+    >Password</label
+  >
+  <input
+    type="password"
+    name="pwd"
+    class="form-control"
+    [(ngModel)]="userSignIn.password"
+    placeholder="Password"
+    required=""
+  />
+  <div class="checkbox mb-3"></div>
+  <button
+    class="btn btn-lg btn-primary btn-block"
+    (click)="signUp()"
+    type="submit"
+  >
+    Sign up
+  </button>
+</form>
