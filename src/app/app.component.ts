@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dashboard';
-  isMenuVisible = false;
+  isMenuVisible = true;
   menuList = [
     {
       name: 'Parent',

@@ -1,0 +1,29 @@
+<div class="main-nav">
+  <div
+    class="root-menu"
+    *ngFor="let rootMenu of menuList; let rootMenuIndex = index"
+  >
+    <span class="root-menu-label"> {{ rootMenu.label }}</span>
+    <div
+      class="nav-card collapsed"
+      *ngFor="let subMenuItem of rootMenu.childs; let subMenuIndex = index"
+      data-toggle="collapse"
+      [attr.data-target]="'#subMenuTarget' + rootMenuIndex + subMenuIndex"
+    >
+      <span>
+        <label [ngClass]="subMenuItem.icon"></label> {{ subMenuItem.label }}
+      </span>
+      <ul
+        class="nav-sub-menu collapse"
+        id="subMenuTarget{{ rootMenuIndex }}{{ subMenuIndex }}"
+      >
+        <li *ngFor="let subMenu of subMenuItem.childs" 
+         aria-haspopup="true">
+         <a class="rounter-link-custom" [routerLink]="subMenu.routerLink" >
+           {{ subMenu.label }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

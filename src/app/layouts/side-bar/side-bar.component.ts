@@ -1,43 +1,35 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-tree-node',
-  templateUrl: './tree-node.component.html',
-  styleUrls: ['./tree-node.component.scss']
+  selector: 'app-side-bar',
+  templateUrl: './side-bar.component.html',
+  styleUrls: ['./side-bar.component.scss']
 })
+export class SideBarComponent implements OnInit {
 
-export class TreeNodeComponent implements OnInit {
-
-
-  constructor() { this.isMenuVisible = false; }
-
-  isMenuVisible: boolean;
-  @Input() menuList: any;
-
-
-  public menu = [
+   menuList = [
     {
       label: 'User Profile',
       childs: [
         {
           label: 'Personal Details',
-          icon: 'fas fa-car',
+          icon: 'bi-person-circle',
           childs: [
             {
               label: 'Manage User',
-              routerLink: '/user-master/list',
-              permission: ''
+              routerLink: '/login',
+              permission: '',
             },
             {
               label: 'Add User',
               routerLink: '/user-master/create-user',
               permission: '',
-            }
-          ]
+            },
+          ],
         },
         {
           label: 'Product',
-          icon: 'fas fa-coffee',
+          icon: 'bi bi-menu-button-fill',
           childs: [
             {
               label: 'Manage Product',
@@ -48,13 +40,12 @@ export class TreeNodeComponent implements OnInit {
               label: 'Create Product',
               routerLink: '/product/create',
               permission: 'product',
-
             },
-          ]
+          ],
         },
         {
           label: 'Category',
-          icon: 'fas fa-coffee',
+          icon: 'bi bi-menu-button-fill',
           childs: [
             {
               label: 'Manage Product',
@@ -65,15 +56,13 @@ export class TreeNodeComponent implements OnInit {
               label: 'Create Product',
               routerLink: '/product/create',
               permission: 'product',
-
             },
-                   {
+            {
               label: 'Delete Product',
               routerLink: '/product/create',
               permission: 'product',
-
             },
-          ]
+          ],
         },
       ],
     },
@@ -82,23 +71,23 @@ export class TreeNodeComponent implements OnInit {
       childs: [
         {
           label: 'Personal Details',
-          icon: 'fas fa-car',
+          icon: 'bi-person-circle',
           childs: [
             {
               label: 'Manage User',
               routerLink: '/user-master/list',
-              permission: ''
+              permission: '',
             },
             {
               label: 'Add User',
               routerLink: '/user-master/create-user',
               permission: '',
-            }
-          ]
+            },
+          ],
         },
         {
           label: 'Product',
-          icon: 'fas fa-coffee',
+          icon: 'bi bi-menu-button-fill',
           childs: [
             {
               label: 'Manage Product',
@@ -109,13 +98,12 @@ export class TreeNodeComponent implements OnInit {
               label: 'Create Product',
               routerLink: '/product/create',
               permission: 'product',
-
             },
-          ]
+          ],
         },
         {
           label: 'Category',
-          icon: 'fas fa-coffee',
+          icon: 'bi bi-menu-button-fill',
           childs: [
             {
               label: 'Manage Product',
@@ -126,26 +114,22 @@ export class TreeNodeComponent implements OnInit {
               label: 'Create Product',
               routerLink: '/product/create',
               permission: 'product',
-
             },
-                   {
+            {
               label: 'Delete Product',
               routerLink: '/product/create',
               permission: 'product',
-
             },
-          ]
+          ],
         },
-      ]
-
-    }
+      ],
+    },
   ];
-  ngOnInit(): void {
-    console.log(this.menuList);
-  }
+  
+  constructor() { }
 
-  add(): void {
-    this.isMenuVisible = !this.isMenuVisible;
+  ngOnInit(): void {
   }
+  
 
 }

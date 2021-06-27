@@ -1,15 +1,23 @@
 .main-nav {
   background: whitesmoke;
-  font-size: 20px;
+  height: 1200px;
 }
 
 ul {
   list-style-type: none;
 }
 
+.root-menu-label {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 5px 0px 0px 5px;
+}
+
 .nav-card {
   position: relative;
   transition: 0.3s;
+  padding-left: 10px;
+  font-size: 18px;
 }
 
 .nav-card:hover {
@@ -17,23 +25,32 @@ ul {
 }
 
 .glyphicon {
-  color: grey;
+  color: black;
   line-height: unset !important;
 }
 
 .nav-sub-menu:hover {
-  color: grey;
+  color: black;
+}
+
+.menu-active-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .nav-card[data-toggle="collapse"]:after {
-  font-family: "Glyphicons Halflings";
-  content: "\e114";
+  content: "";
+  background-image: url("../../../assets/images/down-arrow.png");
+  background-size: 100%;
+  background-repeat: no-repeat, repeat;
+  height: 24px;
+  width: 14px;
+  margin-right: 5px;
   position: absolute;
   color: #000000;
   font-size: 12px;
   line-height: 12px;
   right: 15px;
-  top: 10px;
+  top: 2px;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -48,3 +65,19 @@ ul {
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
 }
+
+a:link {
+  text-decoration: none;
+  color: #000000;
+}
+a:hover {
+  text-decoration: none;
+  color: #000000;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+// .rounter-link-custom {
+//   text-decoration: underline;
+// }

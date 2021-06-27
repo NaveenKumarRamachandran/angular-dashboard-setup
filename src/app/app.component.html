@@ -1,27 +1,11 @@
-<div
-  class="d-flex p-0 text-white sticky-top"
-  style="width: 100%; background-color: rgb(100, 100, 100)"
->
-  <button
-    class="btn-lg p-3"
-    style="margin-top: 2px; background-color: rgb(100, 100, 100)"
-    (click)="showMenu()"
-  >
-    <span class="glyphicon glyphicon-menu-hamburger"></span>
-  </button>
+<div class="grid-container">
+  <div class="item1">
+    <app-top-header (menuEnable)="showMenu()" ></app-top-header>
+  </div>
+  <div class="item2" style="height: 1200px ">
+<app-side-bar *ngIf="isMenuVisible" > </app-side-bar>
+  </div>
+  <div class="item4">
+    <router-outlet #routerOutlet="outlet"></router-outlet>
+  </div>
 </div>
-<aside
-  *ngIf="isMenuVisible"
-  class="w-25 mh-100"
-  style="height: 1200px; background-color: rgb(100, 100, 100)"
->
-  <app-tree-node [menuList]="menuList"></app-tree-node>
-</aside>
-<!-- <app-login>
-</app-login>
-
-<app-sign-up>
-</app-sign-up>
--->
-
-<router-outlet #routerOutlet="outlet"></router-outlet>
