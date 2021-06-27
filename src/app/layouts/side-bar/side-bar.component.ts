@@ -22,8 +22,8 @@ export class SideBarComponent implements OnInit {
             },
             {
               label: 'Add User',
-              routerLink: '/user-master/create-user',
-              permission: '',
+              routerLink: '/signup',
+              permission: 'signup',
             },
           ],
         },

@@ -17,10 +17,13 @@
         class="nav-sub-menu collapse"
         id="subMenuTarget{{ rootMenuIndex }}{{ subMenuIndex }}"
       >
-        <li *ngFor="let subMenu of subMenuItem.childs" 
-         aria-haspopup="true">
-         <a class="rounter-link-custom" [routerLink]="subMenu.routerLink" >
-           {{ subMenu.label }}
+        <li
+          *ngFor="let subMenu of subMenuItem.childs"
+          routerLinkActive="rounter-link-custom"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a [routerLink]="subMenu.routerLink">
+            {{ subMenu.label }}
           </a>
         </li>
       </ul>
